@@ -1,11 +1,21 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
-
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
 window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+	createDomain();	
+};
+
+let pronoun = ['the','our','findthe'];
+let adj = ['great', 'big','briliant','inteligent','smart' ];
+let noun = ['jogger','racoon','dog','cat','elefant'];
+
+function getRandom(range) {
+	return Math.floor(Math.random() * range);
+};
+
+function createDomain(){
+	let domain =
+	pronoun[getRandom(pronoun.length)] + 
+	adj[getRandom(adj.length)] + 
+	noun[getRandom(noun.length)] +
+	".com";
+
+	document.getElementById("domain").innerHTML = domain;
 };
